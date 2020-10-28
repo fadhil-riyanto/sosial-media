@@ -38,154 +38,96 @@ include("conf/interface.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="asset\css\all.css">
-    <link rel="stylesheet" href="asset\css\bootstrap.min.css">
-    <link rel="stylesheet" href="asset\css\font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="asset/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asset/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asset/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asset/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asset/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asset/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asset/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asset/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asset/css/util.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/main.css">
+    <!--===============================================================================================-->
 </head>
 
 <body>
 
-    <style>
-        .main-content {
-            width: 50%;
-            border-radius: 20px;
-            box-shadow: 0 5px 5px rgba(0, 0, 0, .4);
-            margin: 5em auto;
-            display: flex;
-        }
-
-        .company__info {
-            background-color: #008080;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: #fff;
-        }
-
-        .fa-android {
-            font-size: 3em;
-        }
-
-        @media screen and (max-width: 640px) {
-            .main-content {
-                width: 90%;
-            }
-
-            .company__info {
-                display: none;
-            }
-
-            .login_form {
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-            }
-        }
-
-        @media screen and (min-width: 642px) and (max-width:800px) {
-            .main-content {
-                width: 70%;
-            }
-        }
-
-        .row>h2 {
-            color: #008080;
-        }
-
-        .login_form {
-            background-color: #fff;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-            border-top: 1px solid #ccc;
-            border-right: 1px solid #ccc;
-        }
-
-        form {
-            padding: 0 2em;
-        }
-
-        .form__input {
-            width: 100%;
-            border: 0px solid transparent;
-            border-radius: 0;
-            border-bottom: 1px solid #aaa;
-            padding: 1em .5em .5em;
-            padding-left: 2em;
-            outline: none;
-            margin: 1.5em auto;
-            transition: all .5s ease;
-        }
-
-        .form__input:focus {
-            border-bottom-color: #008080;
-            box-shadow: 0 0 5px rgba(0, 80, 80, .4);
-            border-radius: 4px;
-        }
-
-        .btn {
-            transition: all .5s ease;
-            width: 70%;
-            border-radius: 30px;
-            color: #008080;
-            font-weight: 600;
-            background-color: #fff;
-            border: 1px solid #008080;
-            margin-top: 1.5em;
-            margin-bottom: 1em;
-        }
-
-        .btn:hover,
-        .btn:focus {
-            background-color: #008080;
-            color: #fff;
-        }
-    </style>
-
-    <!-- Main Content -->
-    <div class="container-fluid">
-        <div class="row main-content bg-success text-center">
-            <div class="col-md-4 text-center company__info">
-                <span class="company__logo">
-                    <h2><span class="fa fa-android"></span></h2>
-                </span>
-                <h4 class="company_title">Your Company Logo</h4>
-            </div>
-            <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
-                <div class="container-fluid">
-                    <div class="row">
-                        <h2>Log In</h2>
-                    </div>
-                    <div class="row">
-                        <form control="" class="form-group">
-                            <div class="row">
-                                <input type="text" name="username" id="username" class="form__input"
-                                    placeholder="Username">
-                            </div>
-                            <div class="row">
-                                <!-- <span class="fa fa-lock"></span> -->
-                                <input type="password" name="password" id="password" class="form__input"
-                                    placeholder="Password">
-                            </div>
-                            <div class="row">
-                                <input type="checkbox" name="remember_me" id="remember_me" class="">
-                                <label for="remember_me">Remember Me!</label>
-                            </div>
-                            <div class="row">
-                                <input type="submit" value="Submit" class="btn">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="row">
-                        <p>Don't have an account? <a href="#">Register Here</a></p>
-                    </div>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+                    <span class="login100-form-title-1">
+                        Sign In
+                    </span>
                 </div>
+
+                <form class="login100-form validate-form">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                        <span class="label-input100">Username</span>
+                        <input class="input100" type="text" name="username" placeholder="Enter username">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+                        <span class="label-input100">Password</span>
+                        <input class="input100" type="password" name="pass" placeholder="Enter password">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="flex-sb-m w-full p-b-30">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+                                Remember me
+                            </label>
+                        </div>
+
+                        <div>
+                            <a href="#" class="txt1">
+                                Forgot Password?
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <!-- Footer -->
 
-</body>
+    <!--===============================================================================================-->
+    <script src="asset/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="asset/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="asset/vendor/bootstrap/js/popper.js"></script>
+    <script src="asset/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="asset/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="asset/vendor/daterangepicker/moment.min.js"></script>
+    <script src="asset/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="asset/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="asset/js/main.js"></script>
+
 </body>
 
 </html>
