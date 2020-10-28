@@ -28,3 +28,5 @@ $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "sosial-media";
+
+$conn_mysqli = mysqli_connect($servername, $username, $password, $dbname);
