@@ -26,7 +26,7 @@
   |___________________________________________|*/
 require __DIR__.'/../conf/koneksi.php';
 session_start();
-$conn_mysqli = mysqli_connect($servername, $username, $password, $dbname);
+
 
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -38,4 +38,5 @@ $conn_mysqli = mysqli_connect($servername, $username, $password, $dbname);
     }else{
         header("Location: ../index?login=gagal");
     }
+
 
