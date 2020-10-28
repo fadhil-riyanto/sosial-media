@@ -26,7 +26,12 @@
   |___________________________________________|*/
   session_start();
   require __DIR__.'/conf/interface.php';
+  require __DIR__.'/conf/koneksi.php';
   if(!isset($_SESSION['username'])){
     header("location: index");
   }
+  $username_session = $_SESSION["username"];
+  $q = mysqli_query($conn_mysqli, "SELECT * FROM `$dbname`.`signup` WHERE username = '$username_session'");
+  foreach($q as $hasil)
+  var_dump($hasil);
 ?>
