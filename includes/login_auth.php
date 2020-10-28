@@ -34,8 +34,8 @@ $conn_mysqli = mysqli_connect($servername, $username, $password, $dbname);
     $hitung_data = mysqli_num_rows($q);
     if($hitung_data > 0){
         $_SESSION["username"] = $username;
-        header("Location: home");
+        header("Location: ../home");
     }else{
-        header("Location : index?=gagal");
+        header("Location: ../index?login=gagal");
     }
 
