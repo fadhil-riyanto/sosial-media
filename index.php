@@ -41,6 +41,8 @@ include("conf/interface.php");
     <link rel="stylesheet" href="asset\css\all.css">
     <link rel="stylesheet" href="asset\css\bootstrap.min.css">
     <link rel="stylesheet" href="asset\css\login_style.css">
+    <script src="asset\js\bootstrap.bundle.min.js"></script>
+    <script src="asset\js\jquery.slim.min.js"></script>
 </head>
 
 <body>
@@ -52,7 +54,7 @@ include("conf/interface.php");
             <h5 class="card-title text-center">Sign In</h5>
             <form class="form-signin" action="includes/login_auth.php" method="post">
               <div class="form-label-group">
-                <input type="hidden" name="id-login" value="742109709274">
+                
                 <input type="text" id="username" class="form-control" name="username" placeholder="Username" required autofocus>
                 <label for="username">Username</label>
               </div>
