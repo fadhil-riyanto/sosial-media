@@ -52,6 +52,8 @@ include("conf/interface.php");
 
 </html>
 <?php
-if(isset($_GET["gagal"])){
-echo "Coba lagi!";
-}?>
+if(isset($_GET['login'])){
+    echo "Gagal";
+}
+
+?>
