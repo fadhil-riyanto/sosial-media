@@ -26,5 +26,5 @@
   |___________________________________________|*/
 $servername = "localhost";
 $username = "root";
-$password = "";
-$dbname = "wallstant";
+$password = "root";
+$dbname = "sosial-media";
