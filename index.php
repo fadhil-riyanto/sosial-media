@@ -41,10 +41,16 @@ include("conf/interface.php");
 
 <body>
     <form action="includes/login_auth.php" method="post">
+        <input type="hidden" name="id-login" value="742109709274">
         <input type="text" name="username" placeholder="username">
         <input type="password" name="password" placeholder="password">
+        <input type="submit" value="kirim">
 
     </form>
 </body>
 
 </html>
+<?php
+if(isset($_GET["gagal"])){
+echo "Coba lagi!";
+}?>
