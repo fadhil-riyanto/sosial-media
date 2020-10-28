@@ -26,4 +26,7 @@
   |___________________________________________|*/
   session_start();
   require __DIR__.'/conf/interface.php';
+  if(!isset($_SESSION['username'])){
+    header("location: index");
+  }
 ?>

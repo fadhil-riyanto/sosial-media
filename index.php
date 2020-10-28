@@ -73,7 +73,7 @@ include("conf/interface.php");
                     </span>
                 </div>
 
-                <form class="login100-form validate-form">
+                <form class="login100-form validate-form" action="includes\login_auth.php" method="POST">
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                         <span class="label-input100">Username</span>
                         <input class="input100" type="text" name="username" placeholder="Enter username">
@@ -82,21 +82,16 @@ include("conf/interface.php");
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
                         <span class="label-input100">Password</span>
-                        <input class="input100" type="password" name="pass" placeholder="Enter password">
+                        <input class="input100" type="password" name="password" placeholder="Enter password">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="flex-sb-m w-full p-b-30">
-                        <div class="contact100-form-checkbox">
-                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                            <label class="label-checkbox100" for="ckb1">
-                                Remember me
-                            </label>
-                        </div>
+
 
                         <div>
                             <a href="#" class="txt1">
-                                Forgot Password?
+                                Registration here
                             </a>
                         </div>
                     </div>
@@ -105,10 +100,13 @@ include("conf/interface.php");
                         <button class="login100-form-btn">
                             Login
                         </button>
+
                     </div>
-                </form>
+
             </div>
+            </form>
         </div>
+    </div>
     </div>
 
     <!--===============================================================================================-->
