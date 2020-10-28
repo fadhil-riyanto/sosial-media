@@ -29,3 +29,14 @@ if (isset($_SESSION['username'])) {
    header("Location : home");
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="includes/login_auth.php" method="post"></form>
+</body>
+</html>
