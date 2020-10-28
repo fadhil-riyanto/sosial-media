@@ -25,9 +25,10 @@
   | email  : id.fadhilriyanto[at]gmail.com    |
   |___________________________________________|*/
 session_start();
-if (isset($_SESSION['username'])) {
-   header("Location : home");
+if(isset($_SESSION['username'])) {
+   header("location: home");
 }
+
 include("conf/interface.php");
 ?>
 <!DOCTYPE html>
