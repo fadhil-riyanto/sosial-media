@@ -36,6 +36,7 @@ function lang($txt){
     'reg_fullname' => 'Full Name',
     'reg_bio' => 'Bio',
     'sekolah' => 'Sekolah',
+    'gender' => 'Jenis Kelamin',
     //==================================
     'html_title_tag' => 'Sosial Media',
     'popup_Login_not_valid_modal_title' => 'Maaf',
