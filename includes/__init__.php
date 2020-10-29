@@ -24,10 +24,8 @@
   | Github : github.com/fadhil-riyanto        |
   | email  : id.fadhilriyanto[at]gmail.com    |
   |___________________________________________|*/
-require __DIR__.'koneksi.php';
-require __DIR__.'interface.php';
-require __DIR__.'bahasa_indonesia.php';
-require __DIR__.'login_auth.php';
-require __DIR__.'set_languange.php';
-
-?>
+require 'koneksi.php';
+require 'interface.php';
+require 'bahasa_indonesia.php';
+require 'login_auth.php';
+require 'set_languange.php';
