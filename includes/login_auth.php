@@ -24,7 +24,7 @@
   | Github : github.com/fadhil-riyanto        |
   | email  : id.fadhilriyanto[at]gmail.com    |
   |___________________________________________|*/
-require '__init__.php';
+require 'koneksi.php';
 session_start();
 
 
