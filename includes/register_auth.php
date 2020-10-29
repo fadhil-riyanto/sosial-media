@@ -14,7 +14,9 @@ if(isset($_POST['username'])){
     if($check > 0){
         header("location: ../registrasi.php?reg=Gagal");
     }else{
-        mysqli_query($conn_mysqli, "INSERT INTO `sosial-media`.`signup` (`email`, `username`, `fullname`, `password`, `bio`, `profile`, `school`, `gender`) VALUES ('w', 'w', 'w', 'ww', 'ee', 'w', 'w', 'ww'");
+        mysqli_query($conn_mysqli, "INSERT INTO `signup` (`email`, `username`, `fullname`, `password`, `bio`, `profile`, `school`, `gender`) VALUES ('$email', '$username', '$fullname', '$password', '$bio', 'profile', '$sekolah', '$gender')");
+        header("location: ../index.php");
+        
     }
 }
 ?>
