@@ -26,8 +26,9 @@
   |___________________________________________|*/
 session_start();
 //call panggil file
-require __DIR__.'/includes/bahasa_indonesia.php';
 require __DIR__.'/includes/interface.php';
+
+
 if(isset($_SESSION['username'])) {
    header("location: home");
 }
@@ -40,7 +41,7 @@ if(isset($_SESSION['username'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$title_tag?></title>
+    <title><?= lang("html_title_tag");?></title>
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="asset/images/icons/favicon.ico" />
     <!--===============================================================================================-->
@@ -72,36 +73,31 @@ if(isset($_SESSION['username'])) {
             <div class="wrap-login100">
                 <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
                     <span class="login100-form-title-1">
-                        <?= lang("signup")?>
+                        <?= lang("login")?>
                     </span>
                 </div>
 
                 <form class="login100-form validate-form" action="includes\login_auth.php" method="POST">
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                        <span class="label-input100">Username</span>
-                        <input class="input100" type="text" name="username" placeholder="Enter username">
+                        <span class="label-input100"><?= lang("label_username");?></span>
+                        <input class="input100" type="text" name="username"
+                            placeholder="<?= lang("label_username_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
-                        <span class="label-input100">Password</span>
-                        <input class="input100" type="password" name="password" placeholder="Enter password">
+                        <span class="label-input100"><?= lang("label_password");?></span>
+                        <input class="input100" type="password" name="password"
+                            placeholder="<?= lang("label_password_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="form-control" id="exampleFormControlSelect1" name="languange">
-                            <option value="indonesia">Indonesia</option>
-                            <option value="english">English</option>
 
-                        </select>
-                    </div>
                     <div class="flex-sb-m w-full p-b-30">
 
 
                         <div>
                             <a href="registrasi" class="txt1">
-                                Registration here
+                                <?= lang("registration_login_link");?>
                             </a>
 
                         </div>
@@ -109,7 +105,7 @@ if(isset($_SESSION['username'])) {
 
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
-                            Login
+                            <?= lang("login_button");?>
                         </button>
 
                     </div>
