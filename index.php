@@ -88,7 +88,14 @@ if(isset($_SESSION['username'])) {
                         <input class="input100" type="password" name="password" placeholder="Enter password">
                         <span class="focus-input100"></span>
                     </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Indonesia</option>
+                            <option>English</option>
 
+                        </select>
+                    </div>
                     <div class="flex-sb-m w-full p-b-30">
 
 
@@ -96,6 +103,7 @@ if(isset($_SESSION['username'])) {
                             <a href="registrasi" class="txt1">
                                 Registration here
                             </a>
+
                         </div>
                     </div>
 
