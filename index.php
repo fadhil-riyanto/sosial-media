@@ -90,9 +90,9 @@ if(isset($_SESSION['username'])) {
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Indonesia</option>
-                            <option>English</option>
+                        <select class="form-control" id="exampleFormControlSelect1" name="languange">
+                            <option value="indonesia">Indonesia</option>
+                            <option value="english">English</option>
 
                         </select>
                     </div>
