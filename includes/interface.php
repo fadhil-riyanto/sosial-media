@@ -30,6 +30,8 @@ function lang($txt){
     
     
     'html_title_tag' => 'Sosial Media',
+    'popup_Login_not_valid_modal_title' => 'Maaf',
+    'popup_Login_not_valid'=> 'Login gagal, mungkin password dan username salah!',
     'login' => 'Masuk',
     'label_username' => 'Username',
     'label_username_placeholder' => 'Enter Username',
