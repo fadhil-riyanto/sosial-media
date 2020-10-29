@@ -79,7 +79,14 @@ if(isset($_SESSION['username'])) {
                     </span>
                 </div>
 
-                <form class="login100-form validate-form" action="includes\login_auth.php" method="POST">
+                <form class="login100-form validate-form" action="includes\register_auth.php" method="POST">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                        <span class="label-input100"><?= lang("label_username");?></span>
+                        <input class="input100" type="text" name="username"
+                            placeholder="<?= lang("label_username_placeholder");?>">
+                        <span class="focus-input100"></span>
+                    </div>
+                    
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                         <span class="label-input100"><?= lang("label_username");?></span>
                         <input class="input100" type="text" name="username"
