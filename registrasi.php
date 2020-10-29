@@ -75,49 +75,57 @@ if(isset($_SESSION['username'])) {
             <div class="wrap-login100">
                 <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
                     <span class="login100-form-title-1">
-                        <?= lang("login")?>
+                        <?= lang("register")?>
                     </span>
                 </div>
 
                 <form class="login100-form validate-form" action="includes\register_auth.php" method="POST">
-                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                        <span class="label-input100"><?= lang("label_username");?></span>
-                        <input class="input100" type="text" name="username"
-                            placeholder="<?= lang("label_username_placeholder");?>">
-                        <span class="focus-input100"></span>
-                    </div>
-                    
-                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                        <span class="label-input100"><?= lang("label_username");?></span>
-                        <input class="input100" type="text" name="username"
-                            placeholder="<?= lang("label_username_placeholder");?>">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
+                        <span class="label-input100"><?= lang("email_register");?></span>
+                        <input class="input100" type="text" name="email"
+                            placeholder="<?= lang("email_register_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
-                        <span class="label-input100"><?= lang("label_password");?></span>
-                        <input class="input100" type="password" name="password"
-                            placeholder="<?= lang("label_password_placeholder");?>">
-                        <span class="focus-input100"></span>
-                    </div>
+                    <form class="login100-form validate-form" action="includes\register_auth.php" method="POST">
+                        <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                            <span class="label-input100"><?= lang("email_register");?></span>
+                            <input class="input100" type="text" name="username"
+                                placeholder="<?= lang("label_username_placeholder");?>">
+                            <span class="focus-input100"></span>
+                        </div>
 
-                    <div class="flex-sb-m w-full p-b-30">
+                        <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                            <span class="label-input100"><?= lang("label_username");?></span>
+                            <input class="input100" type="text" name="username"
+                                placeholder="<?= lang("label_username_placeholder");?>">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+                            <span class="label-input100"><?= lang("label_password");?></span>
+                            <input class="input100" type="password" name="password"
+                                placeholder="<?= lang("label_password_placeholder");?>">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="flex-sb-m w-full p-b-30">
 
 
-                        <div>
-                            <a href="registrasi.php" class="txt1">
-                                <?= lang("registration_login_link");?>
-                            </a>
+                            <div>
+                                <a href="registrasi.php" class="txt1">
+                                    <?= lang("registration_login_link");?>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                <?= lang("login_button");?>
+                            </button>
 
                         </div>
-                    </div>
-
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
-                            <?= lang("login_button");?>
-                        </button>
-
-                    </div>
 
             </div>
             </form>
