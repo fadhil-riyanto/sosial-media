@@ -138,7 +138,7 @@ if(isset($_SESSION['username'])) {
 </html>
 <?php
 if(isset($_GET['login'])){
-    echo "Gagal";
+    echo "<script>alert('Login Gagal!');</script>";
 }
 
 ?>
