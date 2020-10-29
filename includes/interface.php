@@ -35,7 +35,7 @@ function lang($txt){
     'email_register_placeholder' => 'Enter Email',
     'reg_fullname' => 'Full Name',
     'reg_bio' => 'Bio',
-    'sekolah' => 'Sekolah'
+    'sekolah' => 'Sekolah',
     //==================================
     'html_title_tag' => 'Sosial Media',
     'popup_Login_not_valid_modal_title' => 'Maaf',
