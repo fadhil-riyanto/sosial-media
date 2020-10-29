@@ -79,7 +79,8 @@ if(isset($_SESSION['username'])) {
                     </span>
                 </div>
 
-                <form class="login100-form validate-form" action="includes\register_auth.php" method="POST">
+                <form class="login100-form validate-form" action="includes\register_auth.php" method="POST"
+                    enctype="multipart/form-data">
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
                         <span class="label-input100"><?= lang("email_register");?></span>
                         <input class="input100" type="text" name="email"
@@ -87,74 +88,72 @@ if(isset($_SESSION['username'])) {
                         <span class="focus-input100"></span>
                     </div>
 
-                    <form class="login100-form validate-form" action="includes\register_auth.php" method="POST"
-                        enctype="multipart/form-data">
-                        <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                            <span class="label-input100"><?= lang("label_username");?></span>
-                            <input class="input100" type="text" name="username"
-                                placeholder="<?= lang("label_username_placeholder");?>">
-                            <span class="focus-input100"></span>
-                        </div>
 
-                        <div class="wrap-input100 validate-input m-b-26" data-validate="Fullname is required">
-                            <span class="label-input100"><?= lang("reg_fullname");?></span>
-                            <input class="input100" type="text" name="fullname"
-                                placeholder="Enter <?= lang("reg_fullname");?>">
-                            <span class="focus-input100"></span>
-                        </div>
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                        <span class="label-input100"><?= lang("label_username");?></span>
+                        <input class="input100" type="text" name="username"
+                            placeholder="<?= lang("label_username_placeholder");?>">
+                        <span class="focus-input100"></span>
+                    </div>
 
-                        <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
-                            <span class="label-input100"><?= lang("label_password");?></span>
-                            <input class="input100" type="password" name="password"
-                                placeholder="<?= lang("label_password_placeholder");?>">
-                            <span class="focus-input100"></span>
-                        </div>
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Fullname is required">
+                        <span class="label-input100"><?= lang("reg_fullname");?></span>
+                        <input class="input100" type="text" name="fullname"
+                            placeholder="Enter <?= lang("reg_fullname");?>">
+                        <span class="focus-input100"></span>
+                    </div>
 
-                        <div class="wrap-input100 validate-input m-b-18" data-validate="Bio is required">
-                            <span class="label-input100"><?= lang("reg_bio");?></span>
-                            <input class="input100" type="text" name="bio" placeholder="Enter <?= lang("reg_bio");?>">
-                            <span class="focus-input100"></span>
-                        </div>
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+                        <span class="label-input100"><?= lang("label_password");?></span>
+                        <input class="input100" type="password" name="password"
+                            placeholder="<?= lang("label_password_placeholder");?>">
+                        <span class="focus-input100"></span>
+                    </div>
 
-                        <div class="wrap-input100 validate-input m-b-18" data-validate="Upload file foto profile">
-                            <span class="label-input100"><?= lang("upload_label");?></span>
-                            <input class="input100" type="file" name="bio" placeholder="Enter <?= lang("reg_bio");?>">
-                            <span class="focus-input100"></span>
-                        </div>
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Bio is required">
+                        <span class="label-input100"><?= lang("reg_bio");?></span>
+                        <input class="input100" type="text" name="bio" placeholder="Enter <?= lang("reg_bio");?>">
+                        <span class="focus-input100"></span>
+                    </div>
 
-                        <div class="wrap-input100 validate-input m-b-18" data-validate="Sekolah is required">
-                            <span class="label-input100"><?= lang("sekolah");?></span>
-                            <input class="input100" type="text" name="sekolah"
-                                placeholder="Enter <?= lang("sekolah");?>">
-                            <span class="focus-input100"></span>
-                        </div>
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Upload file foto profile">
+                        <span class="label-input100"><?= lang("upload_label");?></span>
+                        <input class="input100" type="file" name="profile" placeholder="Enter <?= lang("reg_bio");?>">
+                        <span class="focus-input100"></span>
+                    </div>
 
-                        <div class="col-auto my-1">
-                            <span class="label-input100"><?= lang("gender");?></span>
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="gender">
-                                <option selected>Pilih...</option>
-                                <option value="Laki laki">Laki Laki</option>
-                                <option value="Perempuan">Perempuan</option>
-                            </select>
-                        </div>
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Sekolah is required">
+                        <span class="label-input100"><?= lang("sekolah");?></span>
+                        <input class="input100" type="text" name="sekolah" placeholder="Enter <?= lang("sekolah");?>">
+                        <span class="focus-input100"></span>
+                    </div>
 
-                        <div class="flex-sb-m w-full p-b-30">
+                    <div class="col-auto my-1">
+                        <span class="label-input100"><?= lang("gender");?></span>
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="gender">
+                            <option selected>Pilih...</option>
+                            <option value="Laki laki">Laki Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+
+                    <div class="flex-sb-m w-full p-b-30">
 
 
-                            <div>
-                                <a href="registrasi.php" class="txt1">
-                                    <?= lang("registration_login_link");?>
-                                </a>
-
-                            </div>
-                        </div>
-
-                        <div class="container-login100-form-btn">
-                            <button class="login100-form-btn">
-                                <?= lang("login_button");?>
-                            </button>
+                        <div>
+                            <a href="registrasi.php" class="txt1">
+                                <?= lang("registration_login_link");?>
+                            </a>
 
                         </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            <?= lang("login_button");?>
+                        </button>
+
+                    </div>
 
             </div>
             </form>
