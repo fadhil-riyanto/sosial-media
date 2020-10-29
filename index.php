@@ -90,7 +90,7 @@ include("conf/interface.php");
 
 
                         <div>
-                            <a href="#" class="txt1">
+                            <a href="registrasi" class="txt1">
                                 Registration here
                             </a>
                         </div>
