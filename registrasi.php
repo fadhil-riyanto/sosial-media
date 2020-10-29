@@ -205,7 +205,7 @@ if(isset($_SESSION['username'])) {
 
 </html>
 <?php
-if(isset($_GET['login'])){
+if(isset($_GET['reg'])){
     echo "
     <script>$('#exampleModal').modal({
         show: true
