@@ -27,11 +27,15 @@
    +--------------------------------------------------------------------+
 */
 session_start();
+//call panggil file
+require __DIR__.'/includes/interface.php';
+
+
 if(isset($_SESSION['username'])) {
-   header("location: home");
+   header("location: home.php");
 }
 
-include("conf/interface.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +43,7 @@ include("conf/interface.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?= lang("html_title_tag");?></title>
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="asset/images/icons/favicon.ico" />
     <!--===============================================================================================-->
@@ -71,20 +75,22 @@ include("conf/interface.php");
             <div class="wrap-login100">
                 <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
                     <span class="login100-form-title-1">
-                        Sign In
+                        <?= lang("login")?>
                     </span>
                 </div>
 
                 <form class="login100-form validate-form" action="includes\login_auth.php" method="POST">
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                        <span class="label-input100">Username</span>
-                        <input class="input100" type="text" name="username" placeholder="Enter username">
+                        <span class="label-input100"><?= lang("label_username");?></span>
+                        <input class="input100" type="text" name="username"
+                            placeholder="<?= lang("label_username_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
-                        <span class="label-input100">Password</span>
-                        <input class="input100" type="password" name="password" placeholder="Enter password">
+                        <span class="label-input100"><?= lang("label_password");?></span>
+                        <input class="input100" type="password" name="password"
+                            placeholder="<?= lang("label_password_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
@@ -92,15 +98,16 @@ include("conf/interface.php");
 
 
                         <div>
-                            <a href="index" class="txt1">
-                                Login here
+                            <a href="registrasi.php" class="txt1">
+                                <?= lang("registration_login_link");?>
                             </a>
+
                         </div>
                     </div>
 
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
-                            Register
+                            <?= lang("login_button");?>
                         </button>
 
                     </div>
@@ -128,13 +135,45 @@ include("conf/interface.php");
     <!--===============================================================================================-->
     <script src="asset/js/main.js"></script>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><?= lang("popup_Login_not_valid_modal_title");?></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <?= lang("popup_Login_not_valid");?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .img-modal {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+
+
 </body>
 
 </html>
 <?php
 if(isset($_GET['login'])){
-    echo "Gagal";
+    echo "
+    <script>$('#exampleModal').modal({
+        show: true
+      })</script>
+    ";
 }
 
-?>
 ?>
