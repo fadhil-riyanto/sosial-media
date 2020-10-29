@@ -33,6 +33,7 @@ if(isset($_POST['username'])){
     $fullname = $_POST['fullname'];
     $password = $_POST['password'];
     $bio = $_POST['bio'];
+    $profile = $_FILES;
     $sekolah = $_POST['sekolah'];
     $gender = $_POST['gender'];
     
