@@ -25,8 +25,8 @@
   | email  : id.fadhilriyanto[at]gmail.com    |
   |___________________________________________|*/
   session_start();
-  require __DIR__.'/conf/interface.php';
-  require __DIR__.'/conf/koneksi.php';
+  require __DIR__.'/includes/interface.php';
+  require __DIR__.'/includes/koneksi.php';
   if(!isset($_SESSION['username'])){
     header("location: index");
   }
