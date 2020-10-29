@@ -25,5 +25,21 @@
   | email  : id.fadhilriyanto[at]gmail.com    |
   |___________________________________________|*/
   
-  $title_tag = "Sosial Media";
+function lang($txt){
+     $lang = array(
+    
+    
+    'html_title_tag' => 'Sosial Media',
+    'login' => 'Masuk',
+    'label_username' => 'Username',
+    'label_username_placeholder' => 'Enter Username',
+    'label_password' => 'Password',
+    'label_password_placeholder' => 'Enter Password',
+    'registration_login_link' => 'Registrasi di sini',
+    'login_button' => 'Masuk!',
+    'signup' => 'Daftar',
+    'register' => 'Daftar!');
+    return $lang[$txt];
+}
+
 ?>
