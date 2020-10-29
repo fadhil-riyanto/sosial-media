@@ -1,6 +1,7 @@
 <?php
 require 'koneksi.php';
 if(isset($_POST['username'])){
+    $email = $_POST['email'];
     $username = $_POST['username'];
     $q = mysqli_query($conn_mysqli, "SELECT * FROM `$dbname`.`signup` WHERE username = '$username'");
     $check = mysqli_num_rows($q);
