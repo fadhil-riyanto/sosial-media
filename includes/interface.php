@@ -29,7 +29,8 @@
   
 function lang($txt){
      $lang = array(
-    
+   'copyrightname' => 'Fadhil Riyanto',
+    //=================================
     'register' => 'Buat Akun',
     'email_register' => 'Email',
     'email_register_placeholder' => 'Enter Email',
@@ -37,6 +38,8 @@ function lang($txt){
     'reg_bio' => 'Bio',
     'sekolah' => 'Sekolah',
     'gender' => 'Jenis Kelamin',
+    'die_reg_contect' => 'Maaf, username telah digunakan!',
+    'die_reg_head' => 'Maaf',
     //==================================
     'html_title_tag' => 'Sosial Media',
     'popup_Login_not_valid_modal_title' => 'Maaf',
