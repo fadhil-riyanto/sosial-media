@@ -25,11 +25,14 @@
   | email  : id.fadhilriyanto[at]gmail.com    |
   |___________________________________________|*/
 session_start();
+//call panggil file
+require __DIR__.'/includes/bahasa_indonesia.php';
+require __DIR__.'/includes/interface.php';
 if(isset($_SESSION['username'])) {
    header("location: home");
 }
 
-include("conf/interface.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +40,7 @@ include("conf/interface.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?=$title_tag?></title>
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="asset/images/icons/favicon.ico" />
     <!--===============================================================================================-->
@@ -69,7 +72,7 @@ include("conf/interface.php");
             <div class="wrap-login100">
                 <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
                     <span class="login100-form-title-1">
-                        Sign In
+                        <?= lang("signup")?>
                     </span>
                 </div>
 
