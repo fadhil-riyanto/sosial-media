@@ -40,6 +40,7 @@ function lang($txt){
     'gender' => 'Jenis Kelamin',
     'die_reg_contect' => 'Maaf, username telah digunakan!',
     'die_reg_head' => 'Maaf',
+    'upload_label' => 'Profile',
     //==================================
     'html_title_tag' => 'Sosial Media',
     'popup_Login_not_valid_modal_title' => 'Maaf',
