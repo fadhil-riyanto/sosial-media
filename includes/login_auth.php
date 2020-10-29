@@ -24,7 +24,7 @@
   | Github : github.com/fadhil-riyanto        |
   | email  : id.fadhilriyanto[at]gmail.com    |
   |___________________________________________|*/
-require __DIR__.'/../conf/koneksi.php';
+require '__init__.php';
 session_start();
 
 
