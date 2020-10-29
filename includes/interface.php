@@ -30,7 +30,11 @@
 function lang($txt){
      $lang = array(
     
-    
+    'register' => 'Buat Akun',
+    'email_register' => 'Email',
+    'email_register_placeholder' => 'Enter Email',
+
+    //==================================
     'html_title_tag' => 'Sosial Media',
     'popup_Login_not_valid_modal_title' => 'Maaf',
     'popup_Login_not_valid'=> 'Login gagal, mungkin password dan username salah!',
@@ -41,8 +45,7 @@ function lang($txt){
     'label_password_placeholder' => 'Enter Password',
     'registration_login_link' => 'Registrasi di sini',
     'login_button' => 'Masuk!',
-    'signup' => 'Daftar',
-    'register' => 'Daftar!');
+    'signup' => 'Daftar');
     return $lang[$txt];
 }
 
