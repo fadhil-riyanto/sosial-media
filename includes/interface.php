@@ -25,4 +25,5 @@
   | email  : id.fadhilriyanto[at]gmail.com    |
   |___________________________________________|*/
   
+  $title_tag = "Sosial Media";
 ?>
