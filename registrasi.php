@@ -87,7 +87,8 @@ if(isset($_SESSION['username'])) {
                         <span class="focus-input100"></span>
                     </div>
 
-                    <form class="login100-form validate-form" action="includes\register_auth.php" method="POST">
+                    <form class="login100-form validate-form" action="includes\register_auth.php" method="POST"
+                        enctype="multipart/form-data">
                         <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                             <span class="label-input100"><?= lang("label_username");?></span>
                             <input class="input100" type="text" name="username"
@@ -112,6 +113,12 @@ if(isset($_SESSION['username'])) {
                         <div class="wrap-input100 validate-input m-b-18" data-validate="Bio is required">
                             <span class="label-input100"><?= lang("reg_bio");?></span>
                             <input class="input100" type="text" name="bio" placeholder="Enter <?= lang("reg_bio");?>">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-18" data-validate="Upload file foto profile">
+                            <span class="label-input100"><?= lang("upload_label");?></span>
+                            <input class="input100" type="file" name="bio" placeholder="Enter <?= lang("reg_bio");?>">
                             <span class="focus-input100"></span>
                         </div>
 
