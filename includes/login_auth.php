@@ -32,13 +32,20 @@ session_start();
 
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $q = mysqli_query($conn_mysqli, "SELECT * FROM `$dbname`.`signup` WHERE username = '$username' AND password = '$password'");
-    $hitung_data = mysqli_num_rows($q);
-    if($hitung_data > 0){
-        $_SESSION["username"] = $username;
-        header("Location: ../home");
+    $id = $_POST["id-0089"];
+    $passwordTerhash = hash('sha512', $password);
+    if($id == null){
+        $q = mysqli_query($conn_mysqli, "SELECT * FROM `$dbname`.`signup` WHERE username = '$username' AND password = '$passwordTerhash'");
+        $hitung_data = mysqli_num_rows($q);
+        if($hitung_data > 0){
+            $_SESSION["username"] = $username;
+            header("Location: ../home");
+        }else{
+            header("Location: ../index?login=gagal");
+        }
     }else{
         header("Location: ../index?login=gagal");
     }
+    
 
 
