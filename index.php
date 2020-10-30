@@ -91,6 +91,7 @@ if(isset($_SESSION['username'])) {
                         <span class="label-input100"><?= lang("label_password");?></span>
                         <input class="input100" type="password" name="password"
                             placeholder="<?= lang("label_password_placeholder");?>">
+                            <input type="hidden" name="id-0089" value="">
                         <span class="focus-input100"></span>
                     </div>
 
