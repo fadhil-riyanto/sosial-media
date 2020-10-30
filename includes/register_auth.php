@@ -32,6 +32,9 @@ if(isset($_POST['username'])){
     $username = $_POST['username'];
     $fullname = $_POST['fullname'];
     $password = $_POST['password'];
+    //hash pass
+    $passwordTerhash = hash('sha512', $password);
+    //end hash, pakek512 ajah
     $bio = $_POST['bio'];
     $profileName = $_FILES['profile']['name'];
     $profileSementara = $_FILES['profile']['tmp_name'];
@@ -39,11 +42,11 @@ if(isset($_POST['username'])){
     $gender = $_POST['gender'];
     // Setting dir Uploads
     $dirUpload = "upload/";
-    //var_dump($profileName);
+    //var_dump($passwordTerhash);
     //Move to direktori proyek kita
-    $terupload = move_uploaded_file($profileSementara, $dirUpload.$profileName);
+     $terupload = move_uploaded_file($profileSementara, $dirUpload.$profileName);
     
-    //db check data ada apa nggak
+    // //db check data ada apa nggak
 
     $q = mysqli_query($conn_mysqli, "SELECT * FROM `$dbname`.`signup` WHERE username = '$username'");
     $check = mysqli_num_rows($q);
@@ -52,7 +55,7 @@ if(isset($_POST['username'])){
         header("location: ../registrasi.php?reg=Gagal");
     }else{
         //kalau ngga ada data maka kueri ke db
-        mysqli_query($conn_mysqli, "INSERT INTO `signup` (`email`, `username`, `fullname`, `password`, `bio`, `profile`, `school`, `gender`) VALUES ('$email', '$username', '$fullname', '$password', '$bio', '$profileName', '$sekolah', '$gender')");
+        mysqli_query($conn_mysqli, "INSERT INTO `signup` (`email`, `username`, `fullname`, `password`, `bio`, `profile`, `school`, `gender`) VALUES ('$email', '$username', '$fullname', '$passwordTerhash', '$bio', '$profileName', '$sekolah', '$gender')");
         //tendang ke index dan buat session
         header("location: ../index.php");
         
