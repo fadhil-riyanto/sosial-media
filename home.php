@@ -95,6 +95,7 @@
     </div>
 
   </nav>
+  <?php var_dump($hasil);?>
 </body>
 
 </html>
