@@ -28,7 +28,7 @@
 */
 session_start();
 //call panggil file
-require __DIR__.'/includes/interface.php';
+require __DIR__.'/config.php';
 
 
 if(isset($_SESSION['username'])) {
