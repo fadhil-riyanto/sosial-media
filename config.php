@@ -32,6 +32,9 @@ $username_db_fadhil = "root";
 $password_db_fadhil = "root";
 $dbname_db_fadhil = "sosial-media";
 
+// =========== Extensi yang di ijinkan untuk di upload di form upload =============
+$exetensionFile_fadhil = array("jpg","png","gif");
+
 function lang($txt){
     $lang = array(
         'copyrightname' => 'Fadhil Riyanto',
