@@ -22,7 +22,7 @@
    | - Memperbaiki patch.                                               |
    | - Menggunakan untuk tujuan pendidikan.                             |
    +--------------------------------------------------------------------+
-   | Authors: Fadhil Riyanto<andi@php.net>                              |
+   | Authors: Fadhil Riyanto                                            |
    | Github : github.com/fadhil-riyanto                                 |
    +--------------------------------------------------------------------+
 */
@@ -57,7 +57,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="color: blue;">
+  <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #718791;">
 
     <a class="navbar-brand" href="#"><?= lang("project_name");?></a>
 

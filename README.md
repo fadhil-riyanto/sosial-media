@@ -29,6 +29,6 @@ Start date : 28 octtober 2020<br>
    | - Memperbaiki patch.                          
    | - Menggunakan untuk tujuan pendidikan.        
    
-   | Authors: Fadhil Riyanto<andi@php.net>         
+   | Authors: Fadhil Riyanto         
    | Github : github.com/fadhil-riyanto            
    
