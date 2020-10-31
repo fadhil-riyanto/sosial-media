@@ -90,42 +90,42 @@ if(isset($_SESSION['username'])) {
 
 
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                        <span class="label-input100"><?= lang("label_username");?></span>
+                        <span class="label-input100"><?= lang("username_register");?></span>
                         <input class="input100" type="text" name="username"
-                            placeholder="<?= lang("label_username_placeholder");?>">
+                            placeholder="<?= lang("username_register_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Fullname is required">
-                        <span class="label-input100"><?= lang("reg_fullname");?></span>
+                        <span class="label-input100"><?= lang("fullname_register");?></span>
                         <input class="input100" type="text" name="fullname"
-                            placeholder="Enter <?= lang("reg_fullname");?>">
+                            placeholder="<?= lang("fullname_register_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
-                        <span class="label-input100"><?= lang("label_password");?></span>
+                        <span class="label-input100"><?= lang("password_register");?></span>
                         <input class="input100" type="password" name="password"
-                            placeholder="<?= lang("label_password_placeholder");?>">
+                            placeholder="<?= lang("password_register_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Bio is required">
-                        <span class="label-input100"><?= lang("reg_bio");?></span>
-                        <input class="input100" type="text" name="bio" placeholder="Enter <?= lang("reg_bio");?>">
+                        <span class="label-input100"><?= lang("bio_register");?></span>
+                        <input class="input100" type="text" name="bio" placeholder="<?= lang("bio_register_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Upload file foto profile">
-                        <span class="label-input100"><?= lang("upload_label");?></span>
+                        <span class="label-input100"><?= lang("profile_register");?></span>
                         <input class="input100" type="file" name="profile" id="file"
-                            placeholder="Enter <?= lang("reg_bio");?>">
+                            >
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Sekolah is required">
-                        <span class="label-input100"><?= lang("sekolah");?></span>
-                        <input class="input100" type="text" name="sekolah" placeholder="Enter <?= lang("sekolah");?>">
+                        <span class="label-input100"><?= lang("school_register");?></span>
+                        <input class="input100" type="text" name="sekolah" placeholder="<?= lang("school_register_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
@@ -142,8 +142,8 @@ if(isset($_SESSION['username'])) {
 
 
                         <div>
-                            <a href="registrasi.php" class="txt1">
-                                <?= lang("registration_login_link");?>
+                            <a href="index.php" class="txt1">
+                                <?= lang("back_to_login_from_register");?>
                             </a>
 
                         </div>
@@ -151,7 +151,7 @@ if(isset($_SESSION['username'])) {
 
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
-                            <?= lang("login_button");?>
+                            <?= lang("button_send_form_register");?>
                         </button>
 
                     </div>
@@ -184,13 +184,13 @@ if(isset($_SESSION['username'])) {
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><?= lang("die_reg_head");?></h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><?= lang("die_register_head_modal_boostrap");?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <?= lang("die_reg_contect");?>
+                    <?= lang("die_register_username_boostrap");?>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
