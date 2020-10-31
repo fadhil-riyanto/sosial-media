@@ -43,9 +43,9 @@ if(isset($_SESSION['username'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= lang("html_title_tag");?></title>
+    <title><?= lang("project_name");?></title>
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="asset/images/icons/favicon.ico" />
+    <link rel="icon" type="image/png" href="<?= lang("favicon_path_files");?>" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="asset/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -81,16 +81,16 @@ if(isset($_SESSION['username'])) {
 
                 <form class="login100-form validate-form" action="includes\login_auth.php" method="POST">
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                        <span class="label-input100"><?= lang("label_username");?></span>
+                        <span class="label-input100"><?= lang("login_username");?></span>
                         <input class="input100" type="text" name="username"
-                            placeholder="<?= lang("label_username_placeholder");?>">
+                            placeholder="<?= lang("login_username_placeholder");?>">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
-                        <span class="label-input100"><?= lang("label_password");?></span>
+                        <span class="label-input100"><?= lang("login_password");?></span>
                         <input class="input100" type="password" name="password"
-                            placeholder="<?= lang("label_password_placeholder");?>">
+                            placeholder="<?= lang("login_password_placeholder");?>">
                             <input type="hidden" name="id-0089" value="">
                         <span class="focus-input100"></span>
                     </div>
@@ -108,7 +108,7 @@ if(isset($_SESSION['username'])) {
 
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
-                            <?= lang("login_button");?>
+                            <?= lang("button_send_from_login");?>
                         </button>
 
                     </div>
