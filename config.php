@@ -42,6 +42,8 @@ $exetensionFile_fadhil = array(
 function lang($txt){
     $lang = array(
         'copyrightname'                   => 'Fadhil Riyanto',
+        'project_name'                    => 'Sosial Media',
+        'favicon_path_files'              => '',
         //=============Register==============
         'register'                        => 'Buat Akun',
         'email_register'                  => 'Email',
@@ -64,18 +66,17 @@ function lang($txt){
         'back_to_login_from_register'     => 'Login di sini',
         
         
-        //==================================
-        'html_title_tag' => 'Sosial Media',
-        'popup_Login_not_valid_modal_title' => 'Maaf',
-        'popup_Login_not_valid'=> 'Login gagal, mungkin password dan username salah!',
-        'login' => 'Masuk',
-        'label_username' => 'Username',
-        'label_username_placeholder' => 'Enter Username',
-        'label_password' => 'Password',
-        'label_password_placeholder' => 'Enter Password',
-        'registration_login_link' => 'Registrasi di sini',
-        'login_button' => 'Masuk!',
-        'signup' => 'Daftar');
+        //============= Login ==============,
+        'signup' => 'Daftar',
+        'die_login_head_modal_boostrap'   => 'Maaf',
+        'die_login_username_boostrap'     => 'Login gagal, mungkin password dan username salah!',
+        'login'                           => 'Masuk',
+        'login_username'                  => 'Username',
+        'login_username_placeholder'      => 'Enter Username',
+        'login_password'                  => 'Password',
+        'login_password_placeholder'      => 'Enter Password',
+        'registration_login_link'         => 'Registrasi di sini',
+        'button_send_from_login'     => 'Masuk!');
    return $lang[$txt];
 }
 ?>
