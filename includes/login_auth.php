@@ -28,12 +28,14 @@
 */
 require 'koneksi.php';
 session_start();
-
-
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $id = $_POST["id-0089"];
+    // Anti sql injeksi
+    $username = mysqli_real_escape_string($conn_mysqli, $_POST["username"]);
+    $password = mysqli_real_escape_string($conn_mysqli, $_POST["password"]);
+    // Anti Bots
+    $id = ($_POST["id-0089"]);
+    // Anti curi curi database
     $passwordTerhash = hash('sha512', $password);
+    // Input procces
     if($id == null){
         $q = mysqli_query($conn_mysqli, "SELECT * FROM `$dbname`.`signup` WHERE username = '$username' AND password = '$passwordTerhash'");
         $hitung_data = mysqli_num_rows($q);
