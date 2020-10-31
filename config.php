@@ -27,28 +27,43 @@
    +--------------------------------------------------------------------+
 */
 // ======================= Database =======================
-$server_fadhil = "localhost";
-$username_db_fadhil = "root";
-$password_db_fadhil = "root";
-$dbname_db_fadhil = "sosial-media";
+$server_fadhil                            = "localhost";
+$username_db_fadhil                       = "root";
+$password_db_fadhil                       = "root";
+$dbname_db_fadhil                         = "sosial-media";
 
 // =========== Extensi yang di ijinkan untuk di upload di form upload =============
-$exetensionFile_fadhil = array("jpg","png","gif");
+$exetensionFile_fadhil = array(
+            "jpg",
+            "png",
+            "gif"
+         );
 
 function lang($txt){
     $lang = array(
-        'copyrightname' => 'Fadhil Riyanto',
+        'copyrightname'                   => 'Fadhil Riyanto',
         //=============Register==============
-        'register' => 'Buat Akun',
-        'email_register' => 'Email',
-        'email_register_placeholder' => 'Enter Email',
-        'reg_fullname' => 'Full Name',
-        'reg_bio' => 'Bio',
-        'sekolah' => 'Sekolah',
-        'gender' => 'Jenis Kelamin',
-        'die_reg_contect' => 'Maaf, username telah digunakan!',
-        'die_reg_head' => 'Maaf',
-        'upload_label' => 'Profile',
+        'register'                        => 'Buat Akun',
+        'email_register'                  => 'Email',
+        'email_register_placeholder'      => 'Enter Email',
+        'username_register'               => 'Username',
+        'username_register_placeholder'   => 'Enter Username',
+        'fullname_register'               => 'Full Name',
+        'fullname_register_placeholder'   => 'Enter Full Name',
+        'password_register'               => 'Password',
+        'password_register_placeholder'   => 'Enter Password',
+        'bio_register'                    => 'Bio',
+        'bio_register_placeholder'        => 'Enter Bio',
+        'profile_register'                => 'Profile',
+        'school_register'                 => 'Sekolah',
+        'school_register_placeholder'     => 'Enter Sekolah',
+        'gender'                          => 'Jenis Kelamin',
+        'die_register_head_modal_boostrap'=> 'Maaf',
+        'die_register_username_boostrap'  => 'Maaf, username telah digunakan!',
+        'button_send_form_register'       => 'Daftar!',
+        'back_to_login_from_register'     => 'Login di sini',
+        
+        
         //==================================
         'html_title_tag' => 'Sosial Media',
         'popup_Login_not_valid_modal_title' => 'Maaf',
