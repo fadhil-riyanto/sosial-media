@@ -26,6 +26,7 @@
    | Github : github.com/fadhil-riyanto                                 |
    +--------------------------------------------------------------------+
 */
+// ======================= Database =======================
 $server_fadhil = "localhost";
 $username_db_fadhil = "root";
 $password_db_fadhil = "root";
