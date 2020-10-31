@@ -28,18 +28,18 @@
 */
 require 'koneksi.php';
 if(isset($_POST['username'])){
-    $email = $_POST['email'];
-    $username = $_POST['username'];
-    $fullname = $_POST['fullname'];
+    $email = htmlspecialchars($_POST['email']);
+    $username = htmlspecialchars($_POST['username']);
+    $fullname = htmlspecialchars($_POST['fullname']);
     $password = $_POST['password'];
     //hash pass
     $passwordTerhash = hash('sha512', $password);
     //end hash, pakek512 ajah
-    $bio = $_POST['bio'];
+    $bio = htmlspecialchars($_POST['bio']);
     $profileName = $_FILES['profile']['name'];
     $profileSementara = $_FILES['profile']['tmp_name'];
-    $sekolah = $_POST['sekolah'];
-    $gender = $_POST['gender'];
+    $sekolah = htmlspecialchars($_POST['sekolah']);
+    $gender = htmlspecialchars($_POST['gender']);
     // Setting dir Uploads
     $dirUpload = "upload/";
     //var_dump($passwordTerhash);
