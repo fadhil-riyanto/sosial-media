@@ -35,6 +35,8 @@
   $username_session = $_SESSION["username"];
   $q = mysqli_query($conn_mysqli, "SELECT * FROM `$dbname`.`signup` WHERE username = '$username_session'");
   foreach($q as $hasil)
+  var_dump($hasil);
+
   
 ?>
 <!DOCTYPE html>
@@ -130,16 +132,16 @@
           <tbody>
             <tr>
               <td style="width:50px;">
-                <div class="username_OF_postImg"><img src="imgs/user_imgs/16037723411769314365.png"></div>
+                <div class="username_OF_postImg"><img src="includes/upload/<?= $hasil['profile'];?>"></div>
               </td>
               <td style="padding: 10px 0px">
-                <a href="u/fadhil_riyanto">Fadhil Riyanto</a><br>
-                <span class="username_OF_postTime">@fadhil_riyanto</span>
+                <a><?= $hasil['fullname'];?></a><br>
+                <span class="username_OF_postTime"><?= $hasil['username'];?></span>
               </td>
             </tr>
           </tbody>
         </table>
-        <form id="postingToDB" action="includes/wpost.php" method="post" enctype="multipart/form-data"
+        <form id="postingToDB" action="includes\home_post.php" method="post" enctype="multipart/form-data"
           style="margin: 0;">
           <div id="w_text" class="wpost_tabcontent" style="display:block;padding: 0px">
             <textarea dir="auto" id="lang_rtl_ltr" class="post_textbox"
@@ -168,13 +170,7 @@
               </div>
             </label>
           </div>
-          <div id="w_title" class="wpost_tabcontent">
-            <input type="text" name="w_title" maxlength="100" id="your_title"
-              placeholder="Write a title to your post (optional)" class="flat_solid_textfield"><span
-              class="maxlength">100</span>
-            <input type="hidden" name="check_path" value="">
-            / 100
-          </div>
+          
           <div>
             <ul class="wpost_tab">
               <li id="wt_text" style="float:left;">
@@ -185,10 +181,7 @@
                 <button class="wpost_tablinks" onclick="wpost_tabs(event, 'w_photo')"><span
                     style="color: #4CAF50;margin: 0px 5px;" class="fa fa-camera"></span> Photo</button>
               </li>
-              <li id="wt_location" style="float:left;">
-                <button class="wpost_tablinks" onclick="wpost_tabs(event, 'w_title')"><span
-                    style="color: #ffb300;margin: 0px 5px;" class="fa fa-quote-right"></span> Title</button>
-              </li>
+
               <li style="float:right;">
                 <input class="default_flat_btn" type="submit" name="post_now" value="Post now"
                   style="margin: 5px;padding: 8px 10px;">
@@ -204,54 +197,10 @@
             </ul>
           </div>
         </form>
-        <div class="loadingPosting" style="display: none;">
-          <p class="loadingPostingP">0</p>
-        </div>
+        
       </div>
       <div id="getingNP"></div>
-      <script>
-        $(document).ready(function () {
-          $('.loadingPosting').hide();
-          var i = 1;
-          $("#postingToDB").on('submit', function (e) {
-            if ($.trim($('.post_textbox').val()) != "") {
-              var plus = i++;
-              $("#getingNP").prepend("<div id='FetchingNewPostsDiv" + plus + "' style='display:none;'></div>");
-              e.preventDefault();
-              $(this).ajaxSubmit({
-                beforeSend: function () {
-                  $("#postingToDB").slideUp();
-                  $('.loadingPosting').show();
-                  $(".loadingPostingP").css({ 'width': '0%' });
-                  $(".loadingPostingP").html('0');
-                },
-                uploadProgress: function (event, position, total, percentCompelete) {
-                  $(".loadingPostingP").css({ 'width': percentCompelete + '%' });
-                  $(".loadingPostingP").html(percentCompelete);
-                },
-                success: function (data) {
-                  $("#postingToDB").slideDown(function () {
-                    $('.loadingPosting').slideUp(function () {
-                      $("#FetchingNewPostsDiv" + plus).html(data);
-                      $("#FetchingNewPostsDiv" + plus).fadeIn();
-                    });
-                    $('.post_textbox').css({ 'height': '95px' });
-                    $("#postingToDB").clearForm();
-                    $('#w_photo').hide();
-                    $('#w_title').hide();
-                    $('#p_privacy').val("Public");
-                    $('#photo_preview').hide();
-                    $('#cancel_photo_preview').hide();
-                    $('#photo_preview_box').show();
-                  });
-                }
-              });
-            } else {
-              return false;
-            }
-          });
-        });
-      </script>
+      
 
       <script type="text/javascript">
         function wpost_tabs(e, tabName) {
