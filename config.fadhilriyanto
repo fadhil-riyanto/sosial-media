@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fadhilriyanto_xml_files>
+    <!-- =================SERVER CONFIGURATION================== -->
+        <server_mysqli>
+            Tove
+        </server_mysqli>
+        <from>Jani</from>
+        <heading>Reminder</heading>
+        <body>Don't forget me this weekend!</body>
+</fadhilriyanto_xml_files>
+
