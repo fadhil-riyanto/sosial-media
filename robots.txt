@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /includes
+Disallow: /includes/post_image_upload
+Disallow: /includes/upload
+Disallow: /asset
+Disallow: /db_fadhil_install
