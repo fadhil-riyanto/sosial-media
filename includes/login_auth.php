@@ -41,9 +41,9 @@ session_start();
         $hitung_data = mysqli_num_rows($q);
         if($hitung_data > 0){
             $_SESSION["username"] = $username;
-            header("Location: ../home");
+            header("Location: ../home.php");
         }else{
-            header("Location: ../index?login=gagal");
+            header("Location: ../index.php?login=gagal");
         }
     }else{
         header("Location: ../index?login=gagal");

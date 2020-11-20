@@ -8,16 +8,16 @@ $n=10;
         $randomString .= $characters[$index]; 
     } 
    $string_random_fadhil = rand();
-   $compiled_rand_string = hash("sha512", $string_random_fadhil);
-   $md5_rand_compiled = md5($string_random_fadhil);
+   $compiled_rand_string = hash("sha1", $string_random_fadhil);
+   
 
    $id_rand_string = uniqid(); 
 
 
 
 
-$name_random = "Rand_".rand(1, 1555555555555555555)."_Date_".date('dmYHis')."_Rand_".rand(8, 3843192558395555839)."_Str_".$randomString."_Hash_".$compiled_rand_string."_MD5_".$md5_rand_compiled."_ID_".$id_rand_string;
+$name_random = "_Date_".date('dmYHis')."_Rand_".rand(8, 3843192558395555839)."_Str_".
+$randomString."_Hash_".$compiled_rand_string."_MD5_";
 echo $name_random;
-
 
 ?>
