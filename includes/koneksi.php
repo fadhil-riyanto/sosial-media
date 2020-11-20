@@ -27,6 +27,7 @@
    +--------------------------------------------------------------------+
 */
 require_once __DIR__.'/../config.php';
+
 $servername = $server_fadhil;
 $username = $username_db_fadhil;
 $password = $password_db_fadhil;
