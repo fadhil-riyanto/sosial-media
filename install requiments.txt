@@ -26,3 +26,5 @@
    +--------------------------------------------------------------------+
 */
 1. Download PECL mongoDB or linux => sudo pecl install mongodb
+2. Activate :: windows  => extension=php_mongodb.dll
+            :: Linux    => extension=mongodb.so 
