@@ -27,10 +27,7 @@
    +--------------------------------------------------------------------+
 */
 require_once __DIR__.'/../config.php';
+$conn_signup = (new MongoDB\Client)->$dbname_db_fadhil->$db1;
+$conn_post = (new MongoDB\Client)->$dbname_db_fadhil->$db2;
 
-$servername = $server_fadhil;
-$username = $username_db_fadhil;
-$password = $password_db_fadhil;
-$dbname = $dbname_db_fadhil;
-
-$conn_mysqli = mysqli_connect($servername, $username, $password, $dbname);
+//mongoDB conn end....

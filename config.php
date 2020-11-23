@@ -27,10 +27,9 @@
    +--------------------------------------------------------------------+
 */
 // ======================= Database =======================
-$server_fadhil                            = "localhost";
-$username_db_fadhil                       = "root";
-$password_db_fadhil                       = "root";
-$dbname_db_fadhil                         = "sosial-media";
+$dbname_db_fadhil                         = " sosialMedia";
+$db1                                      = "signup";
+$db2                                      = "postingan";
 
 // =========== Extensi yang di ijinkan untuk di upload di form upload =============
 $exetensionFile_fadhil = array(
