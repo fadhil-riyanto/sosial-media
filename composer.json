@@ -1,13 +1,13 @@
 {
-    "name": "fadhil_riyanto/sosial_media",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "fadhil-riyanto",
-            "email": "id.fadhil.riyanto@gmail.com"
-        }
-    ],
     "require": {
-        "yzalis/identicon": "^2.0"
+        "mongodb/mongodb": "^1.7",
+        "thiagoalessio/tesseract_ocr": "^2.9",
+        "predis/predis": "^1.1",
+        "yzalis/identicon": "^2.0",
+        "scssphp/scssphp": "^1.4",
+        "php-telegram-bot/telegram-bot-manager": "1.4",
+        "irazasyed/telegram-bot-sdk": "2.0",
+        "zarincheg/telegram-bot-dialogs": "dev-master",
+        "leafo/scssphp": "^0.8.4"
     }
 }
