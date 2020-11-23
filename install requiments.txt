@@ -28,3 +28,14 @@
 1. Download PECL mongoDB or linux => sudo pecl install mongodb
 2. Activate :: windows  => extension=php_mongodb.dll
             :: Linux    => extension=mongodb.so 
+
+3.  - Installing the Library
+    - The preferred method of installing the MongoDB PHP Library is with Composer by running the following command from your project root:
+    - composer require mongodb/mongodb
+
+4.  Configure Autoloading
+    Once you have installed the library, ensure that your application includes Composer’s autoloader as in the following example:
+    <?php
+    require_once __DIR__ . '/vendor/autoload.php';
+
+    done
