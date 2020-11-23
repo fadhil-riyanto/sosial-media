@@ -27,7 +27,12 @@
    +--------------------------------------------------------------------+
 */
 // ======================= Database =======================
-$dbname_db_fadhil                         = " sosialMedia";
+$server_fadhil                            = "localhost";
+$username_db_fadhil                       = "root";
+$password_db_fadhil                       = "root";
+$dbname_db_fadhil                         = "sosial-media";
+
+$dbname_db_fadhil_mongod                         = " sosialMedia";
 $db1                                      = "signup";
 $db2                                      = "postingan";
 
