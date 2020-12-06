@@ -30,7 +30,7 @@ include __DIR__.'/../config.php';
 require 'koneksi.php';
 require 'random_acak_nama.php';
 require_once __DIR__ . '/../vendor/autoload.php';
-$conn_signup = (new MongoDB\Client)->$dbname_db_fadhil_mongod->$db1;
+
 if(isset($_POST['username'])){
     $email = htmlspecialchars($_POST['email']);
     $username = htmlspecialchars($_POST['username']);
@@ -64,8 +64,7 @@ if(isset($_POST['username'])){
         }else{
             //kalau ngga ada data maka kueri ke db
             // Masukkan data baru ke db
-            mysqli_query($conn_mysqli, "INSERT INTO `sosial-media`.`signup` (`email`, `username`, `fullname`, `password`, `bio`, `profile`, `school`, `gender`) VALUES
-            ($email, $username, $fullname, $passwordTerhash, $bio, $profileName, $sekolah, $gender);");
+            mysqli_query($conn_mysqli, "INSERT INTO signup (`email`, `username`, `fullname`, `password`, `bio`, `profile`, `school`, `gender`) VALUES ('$email', '$username', '$fullname', '$passwordTerhash', '$bio', '$filename_rand_fadhil', '$sekolah', '$gender')");
             //tendang ke index
             header("location: ../index.php");
             
