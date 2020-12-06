@@ -64,17 +64,8 @@ if(isset($_POST['username'])){
         }else{
             //kalau ngga ada data maka kueri ke db
             // Masukkan data baru ke db
-            $conn_signup->insertOne([
-                'email' => $email,
-                'username' => $username,
-                'fullname' => $fullname,
-                'password' => $passwordTerhash,
-                'bio' => $bio,
-                'profile' => $filename_rand_fadhil,
-                'school' => $sekolah,
-                'gender' => $gender
-            ]);
-            
+            mysqli_query($conn_mysqli, "INSERT INTO `sosial-media`.`signup` (`email`, `username`, `fullname`, `password`, `bio`, `profile`, `school`, `gender`) VALUES
+            ($email, $username, $fullname, $passwordTerhash, $bio, $profileName, $sekolah, $gender);");
             //tendang ke index
             header("location: ../index.php");
             
