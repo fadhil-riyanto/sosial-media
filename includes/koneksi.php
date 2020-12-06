@@ -26,7 +26,7 @@
    | Github : github.com/fadhil-riyanto                                 |
    +--------------------------------------------------------------------+
 */
-require_once __DIR__.'/../config.php';
+require_once __DIR__ . '/../config.php';
 
 $servername = $server_fadhil;
 $username = $username_db_fadhil;
@@ -36,7 +36,3 @@ $dbname = $dbname_db_fadhil;
 $conn_mysqli = mysqli_connect($servername, $username, $password, $dbname);
 
 require_once __DIR__ . '/../vendor/autoload.php';
-
-$conn_post = (new MongoDB\Client)->$dbname_db_fadhil_mongod->$db2;
-
-//mongoDB conn end....
