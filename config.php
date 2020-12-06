@@ -32,10 +32,6 @@ $username_db_fadhil                       = "root";
 $password_db_fadhil                       = "root";
 $dbname_db_fadhil                         = "sosial-media";
 
-$dbname_db_fadhil_mongod                         = " sosialMedia";
-$db1                                      = "signup";
-$db2                                      = "postingan";
-
 // =========== Extensi yang di ijinkan untuk di upload di form upload =============
 $exetensionFile_fadhil = array(
             "jpg",
@@ -83,4 +79,3 @@ function lang($txt){
         'button_send_from_login'     => 'Masuk!');
    return $lang[$txt];
 }
-?>
